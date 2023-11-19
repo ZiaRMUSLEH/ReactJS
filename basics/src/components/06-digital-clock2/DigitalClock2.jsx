@@ -1,8 +1,11 @@
-import "./DigitalClock1.scss";
+import "./DigitalClock2.scss";
 
-const DigitalClock1 = () => {
+// props validation
+// you are going to get props, and these props are going to be like this, so you don't need to worry if they will be empty or not.
+
+const DigitalClock2 = (props) => {
     const date = new Date();
-   // console.log("DATE: ", date);
+    // console.log("DATE: ", date);
     const day = date.getDate();
    // console.log("DAY: ", day);
     const month = date.getMonth();
@@ -51,8 +54,13 @@ const DigitalClock1 = () => {
         timeOfDay = "MORNING";
     }
 
+    const styles = {
+        color: props.color,
+        backgroundColor: props.backgroundColor,
+    };
+
     return (
-        <div className="digital-clock digital-clock-1">
+        <div style={styles} className="digital-clock digital-clock-1">
             <div className="time">
                 {hours}:{minutes}
             </div>
@@ -68,4 +76,4 @@ const DigitalClock1 = () => {
     );
 };
 
-export default DigitalClock1;
+export default DigitalClock2;

@@ -1,7 +1,7 @@
 import moduleStyles from "./ModuleStyling.module.css";
 
 const ModuleStyling = () => {
-    console.log(moduleStyles["module-paragraph-style"]);
+    // console.log(moduleStyles["module-paragraph-style"]);
 
     return (
         <div className={moduleStyles.moduleContainerStyle}>
